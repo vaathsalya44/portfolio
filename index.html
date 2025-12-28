@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vaathsalya V | Full Stack Developer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Animated Background -->
+    <div class="bg-mesh">
+        <div class="mesh-gradient"></div>
+        <div class="mesh-lines"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">
+                <span class="logo-text">Vaathsalya</span>
+                <span class="logo-dot">.</span>
+                <span class="logo-suffix">V</span>
+            </a>
+            <div class="nav-links">
+                <a href="#home" class="nav-link">Home</a>
+                <a href="#about" class="nav-link">What I Do</a>
+                <a href="#terminal" class="nav-link">Terminal</a>
+                <a href="#skills" class="nav-link">Skills</a>
+                <a href="#experience" class="nav-link">Experience</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </div>
+            <div class="nav-socials">
+                <a href="https://github.com/Vaathsalya44" target="_blank" class="social-icon" title="GitHub">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                    </svg>
+                </a>
+                <a href="https://www.linkedin.com/in/vaathsalya/" target="_blank" class="social-icon" title="LinkedIn">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                    </svg>
+                </a>
+                <a href="mailto:vkvaathsalya@gmail.com" class="social-icon" title="Email">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <rect x="2" y="4" width="20" height="16" rx="2"/>
+                        <path d="M22 6l-10 7L2 6"/>
+                    </svg>
+                </a>
+            </div>
+            <!-- Theme Toggle -->
+            <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+                <svg class="sun-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="5"/>
+                    <line x1="12" y1="1" x2="12" y2="3"/>
+                    <line x1="12" y1="21" x2="12" y2="23"/>
+                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+                    <line x1="1" y1="12" x2="3" y2="12"/>
+                    <line x1="21" y1="12" x2="23" y2="12"/>
+                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+                </svg>
+                <svg class="moon-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+                </svg>
+            </button>
+            <!-- Mobile Menu Toggle -->
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
+                <span class="hamburger"></span>
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div class="mobile-menu" id="mobile-menu">
+            <a href="#home" class="mobile-link">Home</a>
+            <a href="#about" class="mobile-link">What I Do</a>
+            <a href="#terminal" class="mobile-link">Terminal</a>
+            <a href="#skills" class="mobile-link">Skills</a>
+            <a href="#experience" class="mobile-link">Experience</a>
+            <a href="#projects" class="mobile-link">Projects</a>
+            <a href="#contact" class="mobile-link">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    Hi, I'm <span class="highlight">Vaathsalya V</span> 👋
+                </h1>
+                <p class="hero-role">Full Stack Developer</p>
+                <p class="hero-description">
+                    Passionate about building scalable applications, REST APIs, and real-time monitoring systems. 
+                    Currently working at Tessolve Semiconductor, developing automation tools and chatbots for engineering teams.
+                </p>
+                <div class="hero-stats">
+                    <div class="stat-card">
+                        <span class="stat-value">95%</span>
+                        <span class="stat-label">System Accuracy</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-value">500+</span>
+                        <span class="stat-label">Daily Queries</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-value">40%</span>
+                        <span class="stat-label">Efficiency ↑</span>
+                    </div>
+                </div>
+                <div class="hero-actions">
+                    <a href="#contact" class="btn btn-primary">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M22 2L11 13"/>
+                            <path d="M22 2l-7 20-4-9-9-4 20-7z"/>
+                        </svg>
+                        Contact Me
+                    </a>
+                    <a href="Vaathsalya_CV 2 (1).pdf" download class="btn btn-secondary">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                            <polyline points="14 2 14 8 20 8"/>
+                            <line x1="16" y1="13" x2="8" y2="13"/>
+                            <line x1="16" y1="17" x2="8" y2="17"/>
+                        </svg>
+                        Download Resume
+                    </a>
+                </div>
+            </div>
+            <div class="hero-card">
+                <div class="profile-card">
+                    <div class="card-header">
+                        <div class="profile-avatar">V</div>
+                        <div class="status-badge">
+                            <span class="status-dot"></span>
+                            Open to work
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <h3>Vaathsalya V</h3>
+                        <p class="card-role">Full Stack Developer • Bangalore, India</p>
+                    </div>
+                    <div class="card-footer">
+                        <a href="https://github.com/Vaathsalya44" target="_blank" class="card-social">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                            </svg>
+                        </a>
+                        <a href="https://www.linkedin.com/in/vaathsalya/" target="_blank" class="card-social">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                            </svg>
+                        </a>
+                        <a href="mailto:vkvaathsalya@gmail.com" class="card-social">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="2" y="4" width="20" height="16" rx="2"/>
+                                <path d="M22 6l-10 7L2 6"/>
+                            </svg>
+                        </a>
+                        <a href="tel:+916364024829" class="card-social">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What I Do Section -->
+    <section id="about" class="about-section">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-label">About Me</span>
+                <h2 class="section-title">What I Do</h2>
+                <p class="section-subtitle">Building robust full-stack systems with modern technologies</p>
+            </div>
+            <div class="about-grid">
+                <div class="about-card">
+                    <div class="about-icon">🏢</div>
+                    <h3>Current Role</h3>
+                    <p>Software Engineer at Tessolve Semiconductor, building automation tools and monitoring systems</p>
+                </div>
+                <div class="about-card">
+                    <div class="about-icon">🎓</div>
+                    <h3>Education</h3>
+                    <p>B.E. Information Science from Sahyadri College of Engineering (2021-2025)</p>
+                </div>
+                <div class="about-card">
+                    <div class="about-icon">📍</div>
+                    <h3>Location</h3>
+                    <p>Based in Bangalore, India - Open to remote opportunities</p>
+                </div>
+                <div class="about-card">
+                    <div class="about-icon">🚀</div>
+                    <h3>Focus Areas</h3>
+                    <p>Full-Stack Development, System Automation, REST APIs, Real-time Monitoring</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Terminal Section -->
+    <section id="terminal" class="terminal-section">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-label">Interactive</span>
+                <h2 class="section-title">Developer Console</h2>
+                <p class="section-subtitle">Type commands to explore my portfolio</p>
+            </div>
+            <div class="terminal-window">
+                <div class="terminal-header">
+                    <div class="terminal-buttons">
+                        <span class="term-btn red"></span>
+                        <span class="term-btn yellow"></span>
+                        <span class="term-btn green"></span>
+                    </div>
+                    <span class="terminal-title">visitor@vaathsalya-portfolio:~</span>
+                </div>
+                <div class="terminal-body" id="terminal-output">
+                    <pre class="ascii-art">
+██╗   ██╗ █████╗  █████╗ ████████╗██╗  ██╗███████╗ █████╗ ██╗  ██╗   ██╗ █████╗ 
+██║   ██║██╔══██╗██╔══██╗╚══██╔══╝██║  ██║██╔════╝██╔══██╗██║  ╚██╗ ██╔╝██╔══██╗
+██║   ██║███████║███████║   ██║   ███████║███████╗███████║██║   ╚████╔╝ ███████║
+╚██╗ ██╔╝██╔══██║██╔══██║   ██║   ██╔══██║╚════██║██╔══██║██║    ╚██╔╝  ██╔══██║
+ ╚████╔╝ ██║  ██║██║  ██║   ██║   ██║  ██║███████║██║  ██║███████╗██║   ██║  ██║
+  ╚═══╝  ╚═╝  ╚═╝╚═╝  ╚═╝   ╚═╝   ╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝╚══════╝╚═╝   ╚═╝  ╚═╝</pre>
+                    <p class="terminal-welcome">Welcome to my interactive portfolio terminal!</p>
+                    <p class="terminal-hint">Type "<span class="cmd-highlight">help</span>" to see available commands.</p>
+                    <div class="terminal-history"></div>
+                </div>
+                <div class="terminal-input-line">
+                    <span class="terminal-prompt">visitor@vaathsalya:~$</span>
+                    <input type="text" class="terminal-input" id="terminal-input" placeholder="Type a command..." autocomplete="off">
+                </div>
+                <p class="terminal-tip">💡 Try typing <code>help</code> to see all available commands</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills-section">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-label">My Skills</span>
+                <h2 class="section-title">Technical Expertise</h2>
+                <p class="section-subtitle">Technologies and tools I work with</p>
+            </div>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <div class="skill-icon">💻</div>
+                    <h3>Languages</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag"><span class="tag-icon">🐍</span> Python</span>
+                        <span class="skill-tag"><span class="tag-icon">🟨</span> JavaScript</span>
+                        <span class="skill-tag"><span class="tag-icon">⚡</span> C++</span>
+                        <span class="skill-tag"><span class="tag-icon">☕</span> Java</span>
+                        <span class="skill-tag"><span class="tag-icon">🔷</span> Go</span>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">⚛️</div>
+                    <h3>Frontend</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag"><span class="tag-icon">⚛️</span> React.js</span>
+                        <span class="skill-tag"><span class="tag-icon">🎨</span> Tailwind CSS</span>
+                        <span class="skill-tag"><span class="tag-icon">🌐</span> HTML5</span>
+                        <span class="skill-tag"><span class="tag-icon">🎭</span> CSS3</span>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">🛠️</div>
+                    <h3>Backend</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag"><span class="tag-icon">🌿</span> Django</span>
+                        <span class="skill-tag"><span class="tag-icon">🔥</span> Flask</span>
+                        <span class="skill-tag"><span class="tag-icon">⚡</span> FastAPI</span>
+                        <span class="skill-tag"><span class="tag-icon">🟢</span> Node.js</span>
+                        <span class="skill-tag"><span class="tag-icon">🔌</span> REST APIs</span>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">🗄️</div>
+                    <h3>Databases</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag"><span class="tag-icon">🐘</span> PostgreSQL</span>
+                        <span class="skill-tag"><span class="tag-icon">🐬</span> MySQL</span>
+                        <span class="skill-tag"><span class="tag-icon">📊</span> SQL Optimization</span>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">🔧</div>
+                    <h3>Tools & DevOps</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag"><span class="tag-icon">🔀</span> Git</span>
+                        <span class="skill-tag"><span class="tag-icon">🐙</span> GitHub</span>
+                        <span class="skill-tag"><span class="tag-icon">💡</span> VS Code</span>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">🧠</div>
+                    <h3>Concepts</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag"><span class="tag-icon">🏗️</span> Full-Stack</span>
+                        <span class="skill-tag"><span class="tag-icon">🔌</span> REST APIs</span>
+                        <span class="skill-tag"><span class="tag-icon">📊</span> Real-time Systems</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="experience-section">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-label">Experience</span>
+                <h2 class="section-title">Work History</h2>
+                <p class="section-subtitle">My professional journey so far</p>
+            </div>
+            <div class="experience-timeline">
+                <div class="exp-card">
+                    <div class="exp-icon">🏢</div>
+                    <div class="exp-content">
+                        <div class="exp-header">
+                            <h3>Software Engineer Trainee</h3>
+                            <span class="exp-date">Nov 2025 – Present</span>
+                        </div>
+                        <p class="exp-company">Tessolve Semiconductor Private Limited</p>
+                        <p class="exp-description">
+                            Developed Python and Flask-based RAM monitoring system achieving 95% accuracy, 
+                            reducing manual troubleshooting by 30%. Designed full-stack applications for 
+                            system automation using React and Flask.
+                        </p>
+                        <div class="exp-tags">
+                            <span class="exp-tag">95% Accuracy</span>
+                            <span class="exp-tag">30% Less Troubleshooting</span>
+                            <span class="exp-tag">40% Efficiency ↑</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="exp-card">
+                    <div class="exp-icon">💼</div>
+                    <div class="exp-content">
+                        <div class="exp-header">
+                            <h3>Software Engineer Intern</h3>
+                            <span class="exp-date">Feb 2025 – Oct 2025</span>
+                        </div>
+                        <p class="exp-company">Tessolve Semiconductor Private Limited</p>
+                        <p class="exp-description">
+                            Built production-ready chatbot using React and Flask handling 500+ queries daily. 
+                            Developed real-time debugger and web-based serial monitor improving debugging 
+                            efficiency by 35%.
+                        </p>
+                        <div class="exp-tags">
+                            <span class="exp-tag">500+ Queries/Day</span>
+                            <span class="exp-tag">35% Debugging ↑</span>
+                            <span class="exp-tag">50% Deployment ↓</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects-section">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-label">Projects</span>
+                <h2 class="section-title">Featured Work</h2>
+                <p class="section-subtitle">Some of the projects I've worked on</p>
+            </div>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-icon">📊</div>
+                    <div class="project-content">
+                        <h3>RAM Monitoring System</h3>
+                        <p>Engineered automated RAM monitoring tool with 95% accuracy featuring live refresh, 
+                        historical data tracking, and alert notifications.</p>
+                        <div class="project-tech">
+                            <span>Python</span>
+                            <span>Flask</span>
+                            <span>React</span>
+                            <span>FastAPI</span>
+                        </div>
+                        <div class="project-stats">
+                            <span class="project-stat">⚡ 50% Faster Detection</span>
+                            <span class="project-stat">📉 40% Less Manual Work</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-icon">🤖</div>
+                    <div class="project-content">
+                        <h3>Chatbot Application</h3>
+                        <p>Architected intelligent chatbot handling 1,000+ daily queries with predefined logic 
+                        and natural language processing.</p>
+                        <div class="project-tech">
+                            <span>React</span>
+                            <span>Flask</span>
+                            <span>NLP</span>
+                        </div>
+                        <div class="project-stats">
+                            <span class="project-stat">💬 1000+ Queries/Day</span>
+                            <span class="project-stat">✅ 99% Uptime</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-icon">🚌</div>
+                    <div class="project-content">
+                        <h3>Bus Reservation System</h3>
+                        <p>Full-stack reservation platform supporting 500+ passengers with admin operations 
+                        dashboard and secure transaction processing.</p>
+                        <div class="project-tech">
+                            <span>PHP</span>
+                            <span>MySQL</span>
+                            <span>JavaScript</span>
+                        </div>
+                        <div class="project-stats">
+                            <span class="project-stat">👥 500+ Passengers</span>
+                            <span class="project-stat">📉 20% Less Errors</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- GitHub Section -->
+    <section id="github" class="github-section">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-label">Open Source</span>
+                <h2 class="section-title">GitHub Repositories</h2>
+                <p class="section-subtitle">My public projects on GitHub • <a href="https://github.com/Vaathsalya44" target="_blank">View All →</a></p>
+            </div>
+            <div class="github-grid">
+                <a href="https://github.com/Vaathsalya44/fullstack-library-app" target="_blank" class="repo-card">
+                    <div class="repo-icon">📚</div>
+                    <div class="repo-content">
+                        <h4>fullstack-library-app</h4>
+                        <p>FullStack Library App using Node.js and MongoDB to list Books and Authors.</p>
+                        <div class="repo-meta">
+                            <span class="repo-lang">🟨 JavaScript</span>
+                            <span class="repo-stats">⭐ 0 🍴 0</span>
+                        </div>
+                    </div>
+                </a>
+                <a href="https://github.com/Vaathsalya44/ctrlb-frontend-assignment" target="_blank" class="repo-card">
+                    <div class="repo-icon">📊</div>
+                    <div class="repo-content">
+                        <h4>ctrlb-frontend-assignment</h4>
+                        <p>CtrlB Frontend Intern Assignment - Interactive Advertising Dashboard.</p>
+                        <div class="repo-meta">
+                            <span class="repo-lang">🟨 JavaScript</span>
+                            <span class="repo-stats">⭐ 0 🍴 0</span>
+                        </div>
+                    </div>
+                </a>
+                <a href="https://github.com/Vaathsalya44/portfolio" target="_blank" class="repo-card">
+                    <div class="repo-icon">🌐</div>
+                    <div class="repo-content">
+                        <h4>portfolio</h4>
+                        <p>Modern portfolio website showcasing my projects and skills.</p>
+                        <div class="repo-meta">
+                            <span class="repo-lang">🌐 HTML</span>
+                            <span class="repo-stats">⭐ 0 🍴 0</span>
+                        </div>
+                    </div>
+                </a>
+                <a href="https://github.com/Vaathsalya44/pong.py" target="_blank" class="repo-card">
+                    <div class="repo-icon">🎮</div>
+                    <div class="repo-content">
+                        <h4>pong.py</h4>
+                        <p>Classic Pong game implementation in Python.</p>
+                        <div class="repo-meta">
+                            <span class="repo-lang">🐍 Python</span>
+                            <span class="repo-stats">⭐ 0 🍴 0</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-label">Contact</span>
+                <h2 class="section-title">Let's Connect!</h2>
+                <p class="section-subtitle">I'm open to new opportunities and always happy to chat</p>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-card">
+                    <div class="contact-icon">📧</div>
+                    <h4>Email</h4>
+                    <p>vkvaathsalya@gmail.com</p>
+                </div>
+                <div class="contact-card">
+                    <div class="contact-icon">📱</div>
+                    <h4>Phone</h4>
+                    <p>+91-6364024829</p>
+                </div>
+                <div class="contact-card">
+                    <div class="contact-icon">📍</div>
+                    <h4>Location</h4>
+                    <p>Bangalore, India</p>
+                </div>
+            </div>
+            <div class="contact-actions">
+                <a href="mailto:vkvaathsalya@gmail.com" class="btn btn-primary">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M22 2L11 13"/>
+                        <path d="M22 2l-7 20-4-9-9-4 20-7z"/>
+                    </svg>
+                    Send Email
+                </a>
+                <a href="https://www.linkedin.com/in/vaathsalya/" target="_blank" class="btn btn-secondary">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                    </svg>
+                    LinkedIn
+                </a>
+                <a href="https://github.com/Vaathsalya44" target="_blank" class="btn btn-secondary">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                    </svg>
+                    GitHub
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <p>© 2025 Vaathsalya V. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Theme toggle - runs immediately
+        (function() {
+            var savedTheme = localStorage.getItem('theme') || 'dark';
+            document.documentElement.setAttribute('data-theme', savedTheme);
+            
+            document.addEventListener('DOMContentLoaded', function() {
+                // Clear any inline styles on navbar - let CSS handle theming
+                var nav = document.querySelector('.navbar');
+                if (nav) {
+                    nav.removeAttribute('style');
+                }
+                
+                var btn = document.getElementById('theme-toggle');
+                if (btn) {
+                    btn.onclick = function() {
+                        var current = document.documentElement.getAttribute('data-theme');
+                        var next = current === 'dark' ? 'light' : 'dark';
+                        document.documentElement.setAttribute('data-theme', next);
+                        localStorage.setItem('theme', next);
+                        // Clear inline styles to let CSS take over
+                        if (nav) {
+                            nav.removeAttribute('style');
+                        }
+                    };
+                }
+            });
+        })();
+    </script>
+    <script>
+        // Fallback terminal - runs after DOM is loaded
+        window.onload = function() {
+            var input = document.getElementById('terminal-input');
+            var history = document.querySelector('.terminal-history');
+            var body = document.getElementById('terminal-output');
+            
+            if (!input || !history) {
+                console.log('Terminal elements missing!');
+                return;
+            }
+            
+            var cmds = {
+                help: 'Available commands:\n  about, skills, experience, projects, contact, education, social, hello, clear',
+                about: 'Vaathsalya V - Full Stack Developer at Tessolve Semiconductor',
+                skills: 'Python, JavaScript, React, Flask, Django, FastAPI, Node.js, PostgreSQL, MySQL',
+                experience: 'Software Engineer Trainee at Tessolve (Nov 2025 - Present)\nSoftware Engineer Intern at Tessolve (Feb 2025 - Oct 2025)',
+                projects: '1. RAM Monitoring System (Python, Flask, React)\n2. Chatbot Application (React, Flask)\n3. Bus Reservation System (PHP, MySQL)',
+                contact: 'Email: vkvaathsalya@gmail.com\nPhone: +91-6364024829\nLocation: Bangalore, India',
+                education: 'B.E. in Information Science - Sahyadri College (CGPA: 7.66)\nPre-University - Expert PU College (94.6%)',
+                social: 'GitHub: github.com/Vaathsalya44\nLinkedIn: linkedin.com/in/vaathsalya',
+                hello: 'Hello! Welcome to my portfolio. Type "help" for commands.'
+            };
+            
+            input.onkeydown = function(e) {
+                if (e.keyCode === 13 || e.key === 'Enter') {
+                    var cmd = input.value.trim().toLowerCase();
+                    if (!cmd) return;
+                    
+                    // Show command
+                    var cmdDiv = document.createElement('div');
+                    cmdDiv.innerHTML = '<span style="color:#00d4ff">visitor@vaathsalya:~$</span> <span style="color:#a855f7">' + cmd + '</span>';
+                    history.appendChild(cmdDiv);
+                    
+                    // Process
+                    var out = '';
+                    if (cmd === 'clear') {
+                        history.innerHTML = '';
+                        input.value = '';
+                        return;
+                    } else if (cmds[cmd]) {
+                        out = cmds[cmd];
+                    } else {
+                        out = 'Command not found: ' + cmd + '. Type "help" for commands.';
+                    }
+                    
+                    // Show output
+                    var outDiv = document.createElement('div');
+                    outDiv.innerHTML = '<pre style="color:#b0b0c0;margin:5px 0 15px 0;white-space:pre-wrap;">' + out + '</pre>';
+                    history.appendChild(outDiv);
+                    
+                    input.value = '';
+                    if (body) body.scrollTop = body.scrollHeight;
+                }
+            };
+            
+            console.log('Fallback terminal ready!');
+        };
+    </script>
+</body>
+</html>
